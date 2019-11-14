@@ -1,3 +1,23 @@
+## :point_right: 초기 설계 화면
+
+### :rocket: 첫 시작 화면
+
+<img src="img/start.png" style="width:400px" />
+
+### :rocket: 메인 화면
+
+<img src="img/main.png" style="width:400px" />
+
+### :rocket: 검색 화면
+
+<img src="img/search.png" style="width:400px" />
+
+### :rocket: 피드 화면
+
+<img src="img/feed.png" style="width:400px" />
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
