@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 
+import { basename } from 'config';
 import configureStore from 'store/configure';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
@@ -13,7 +14,7 @@ const store = configureStore({}, { api: api.create() });
 
 const renderApp = () => (
   <Provider store={store}>
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <App />
     </BrowserRouter>
   </Provider>
