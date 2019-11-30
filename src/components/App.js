@@ -4,6 +4,8 @@ import styled, {
   createGlobalStyle,
   ThemeProvider,
 } from 'styled-components';
+import { Switch, Route } from 'react-router-dom';
+import { SamplePage } from 'components';
 import { font } from 'styled-theme';
 
 import theme from './themes/default';
@@ -29,8 +31,9 @@ function App() {
       <GlobalStyle />
       <ThemeProvider theme={theme}>
         <Content>
-          <h1>App.js</h1>
-          <p>Initial Configure</p>
+          <Switch>
+            <Route path="/" component={SamplePage} exact />
+          </Switch>
         </Content>
       </ThemeProvider>
     </div>
