@@ -5,7 +5,7 @@ import styled, {
   ThemeProvider,
 } from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
-import { SamplePage } from 'components';
+import { HomePage } from 'components';
 import { font } from 'styled-theme';
 
 import theme from './themes/default';
@@ -32,7 +32,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <Content>
           <Switch>
-            <Route path="/" component={SamplePage} exact />
+            <Route path="/" component={HomePage} exact />
           </Switch>
         </Content>
       </ThemeProvider>
