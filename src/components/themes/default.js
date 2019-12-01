@@ -30,6 +30,12 @@ theme.fonts = {
   quote: 'Georgia, serif',
 };
 
+theme.fontStyle = {
+  normal: 'normal',
+  italic: 'italic',
+  oblique: 'oblique',
+}
+
 theme.sizes = {
   maxWidth: '1100px',
 };

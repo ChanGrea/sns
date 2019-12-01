@@ -24,7 +24,7 @@ const Header = styled.header`
 const Content = styled.section`
   width: 100%;
   box-sizing: border-box;
-  margin: 2rem auto;
+  margin: 2rem 15rem;
   max-width: ${size('maxWidth')};
 `;
 
