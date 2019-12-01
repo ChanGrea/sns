@@ -1,12 +1,10 @@
 import React from 'react';
-import styled, {
-  css,
+import {
   createGlobalStyle,
   ThemeProvider,
 } from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
-import { SamplePage } from 'components';
-import { font } from 'styled-theme';
+import { HomePage } from 'components';
 
 import theme from './themes/default';
 
@@ -16,25 +14,14 @@ body {
 }
 `;
 
-const styles = css`
-  text-align: center;
-`;
-
-const Content = styled.div`
-  ${styles}
-  font-family: ${font('primary')};
-`;
-
 function App() {
   return (
     <div>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
-        <Content>
-          <Switch>
-            <Route path="/" component={SamplePage} exact />
-          </Switch>
-        </Content>
+        <Switch>
+          <Route path="/" component={HomePage} exact />
+        </Switch>
       </ThemeProvider>
     </div>
   );
