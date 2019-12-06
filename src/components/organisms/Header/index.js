@@ -5,17 +5,24 @@ import { Logo, Title, SearchBar } from 'components';
 
 const Wrapper = styled.div`
   display: flex;
-  justify-content: center;
-  padding: 0.5rem;
+  padding: 0.5rem 10rem;
   background-color: yellowgreen;
+`;
+
+const InnerWrapper = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  float: left;
 `;
 
 const Header = () => {
   return (
     <Wrapper>
-      <Logo />
-      <Title />
-      <SearchBar />
+      <InnerWrapper>
+        <Logo />
+        <Title>Grea</Title>
+        <SearchBar />
+      </InnerWrapper>
     </Wrapper>
   );
 };
