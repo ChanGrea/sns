@@ -7,15 +7,16 @@ const styles = css`
   width: 50px;
   height: 50px;
   background-color: purple;
+  float: left;
 `;
 
-export const LinkLogoImg = styled(({ theme, reverse, palette, ...props }) => (
+const LinkLogoImg = styled(({ theme, reverse, palette, ...props }) => (
   <NavLink {...props} />
 ))`
   ${styles}
 `;
 
-export const LogoImg = styled.img`
+const LogoImg = styled.img`
   ${styles}
 `;
 
