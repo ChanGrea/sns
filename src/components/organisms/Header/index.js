@@ -1,7 +1,7 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Logo, Title, SearchBar } from 'components';
+import { Logo, SearchBar } from 'components';
 
 const Wrapper = styled.div`
   display: flex;
@@ -40,7 +40,6 @@ const Header = () => {
       <InnerWrapper>
         <LogoAndSearchBarWrapper>
           <Logo />
-          <Title>Grea</Title>
           <SearchBar />
         </LogoAndSearchBarWrapper>
         <AlertWrapper />
