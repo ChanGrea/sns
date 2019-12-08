@@ -2,6 +2,8 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Logo, SearchBar } from 'components';
+import { LogIn } from 'styled-icons/boxicons-regular/LogIn';
+import { Menu } from 'styled-icons/boxicons-regular/Menu';
 
 const Wrapper = styled.div`
   display: flex;
@@ -10,6 +12,8 @@ const Wrapper = styled.div`
 
 const InnerWrapper = styled.div`
   margin: auto;
+  display: flex;
+  width: 100%;
 
   @media (min-width: 1012px) {
     padding: 0;
@@ -43,7 +47,10 @@ const Header = () => {
           <Logo />
           <SearchBar />
         </LogoAndSearchBarWrapper>
-        <AlertWrapper />
+        <AlertWrapper>
+          <LogIn size="24" />
+          <Menu size="24" />
+        </AlertWrapper>
       </InnerWrapper>
     </Wrapper>
   );
