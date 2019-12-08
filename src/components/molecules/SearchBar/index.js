@@ -14,19 +14,17 @@ const SearchForm = styled.div`
   box-sizing: border-box;
   height: 26px;
   left: -1px;
-  margin-left: 30px;
   margin-top: 0;
   max-width: 448px;
   overflow: hidden;
   padding-left: 5px;
   padding-right: 48px;
   position: relative;
-  top: 8px;
   width: auto;
 `;
 
 
-const SearchBar = ({ ...props }) => {
+const SearchBar = () => {
   return (
     <Wrapper>
       <SearchForm />

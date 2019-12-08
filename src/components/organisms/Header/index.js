@@ -23,6 +23,7 @@ const InnerWrapper = styled.div`
 `;
 
 const LogoAndSearchBarWrapper = styled.div`
+  display: flex;
   flex: 1 1 auto;
   justify-content: flex-start;
   margin: auto;

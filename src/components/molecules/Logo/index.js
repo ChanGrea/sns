@@ -11,18 +11,19 @@ const styles = css`
   background-size: 33px 690px;
   background-position: 0 -33px;
   display: block;
-  height: 24px;
+  height: 26px;
   outline: none;
   overflow: hidden;
   text-indent: -999px;
   white-space: nowrap;
-  width: 24px;
+  width: 26px;
 `;
 
 const Wrapper = styled.div`
-  margin: 7px 0;
-  margin-left: -2px;
-  margin-right: 5px;
+  margin: 0.5em;
+  display: inline-block;
+  outline: none;
+  position: relative;
 `;
 
 const LinkImg = styled(({ theme, reverse, palette, ...props }) => (
