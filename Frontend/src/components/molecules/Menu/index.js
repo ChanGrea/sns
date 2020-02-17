@@ -13,10 +13,10 @@ const Wrapper = styled.div`
 const Menu = ({ ...props }) => {
   return (
     <Wrapper>
-      <MenuItem />
-      <MenuItem />
-      <MenuItem />
-      <MenuItem />
+      <MenuItem name="test1" to="#" />
+      <MenuItem name="test2" to="#" />
+      <MenuItem name="test3" to="#" />
+      <MenuItem name="test4" to="#" />
     </Wrapper>
   );
 };

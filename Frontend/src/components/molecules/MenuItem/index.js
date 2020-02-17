@@ -3,8 +3,19 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link } from 'components';
 
+const Wrapper = styled.div`
+  margin: 0.5em;
+  display: inline-block;
+  outline: none;
+  position: relative;
+`;
+
 const MenuItem = ({ ...props }) => {
-  return <Link>testLink</Link>;
+  return (
+    <Wrapper>
+      <Link to={props.to}>{props.name}</Link>
+    </Wrapper>
+  );
 };
 
 MenuItem.propTypes = {};
