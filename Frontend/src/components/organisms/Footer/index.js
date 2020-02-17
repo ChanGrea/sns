@@ -22,13 +22,7 @@ const Footer = () => {
   return (
     <Wrapper>
       <Credits>
-        Made by 
-        {' '}
-        <Link href="https://github.com/changrea">ChanGrea</Link>
-        {' '}
-        of
-        {' '}
-        <Link href="https://github.com/GreaCorporation">GreaCorporation</Link>
+        Made by <Link href="https://github.com/changrea">ChanGrea</Link>
       </Credits>
     </Wrapper>
   );
