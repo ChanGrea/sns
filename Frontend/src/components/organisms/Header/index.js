@@ -1,7 +1,7 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Logo, SearchBar } from 'components';
+import { Logo, Menu as HeaderMenu } from 'components';
 import { LogIn } from 'styled-icons/boxicons-regular/LogIn';
 import { Menu } from 'styled-icons/boxicons-regular/Menu';
 
@@ -26,7 +26,7 @@ const InnerWrapper = styled.div`
   }
 `;
 
-const LogoAndSearchBarWrapper = styled.div`
+const LogoAndMenuWrapper = styled.div`
   display: flex;
   flex: 1 1 auto;
   justify-content: flex-start;
@@ -43,10 +43,10 @@ const Header = () => {
   return (
     <Wrapper>
       <InnerWrapper>
-        <LogoAndSearchBarWrapper>
+        <LogoAndMenuWrapper>
           <Logo />
-          <SearchBar />
-        </LogoAndSearchBarWrapper>
+          <HeaderMenu />
+        </LogoAndMenuWrapper>
         <AlertWrapper>
           <LogIn size="24" />
           <Menu size="24" />
