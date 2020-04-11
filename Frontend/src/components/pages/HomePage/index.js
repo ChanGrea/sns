@@ -1,12 +1,18 @@
 import React from 'react';
 
-import { PageTemplate, Header, Footer, Paragraph, Link } from 'components';
+import { PageTemplate, Header, Footer } from 'components';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const HomePage = () => {
   return (
     <PageTemplate header={<Header />} footer={<Footer />}>
-      <Paragraph>HomePage</Paragraph>
-      <Link href="https://github.com/changrea">changrea</Link>
+      <Container>
+        <Row>
+          <Col>sideMenu(left)</Col>
+          <Col xs={6}>Main Contents</Col>
+          <Col>sideMenu(right)</Col>
+        </Row>
+      </Container>
     </PageTemplate>
   );
 };
