@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { size } from 'styled-theme';
 
 const Wrapper = styled.div`
   display: flex;
@@ -21,13 +20,6 @@ const Header = styled.header`
   z-index: 999;
 `;
 
-const Content = styled.section`
-  width: 100%;
-  box-sizing: border-box;
-  margin: 2rem 15rem;
-  max-width: ${size('maxWidth')};
-`;
-
 const Footer = styled.footer`
   margin-top: auto;
 `;
@@ -36,7 +28,7 @@ const PageTemplate = ({ header, children, footer, ...props }) => {
   return (
     <Wrapper {...props}>
       <Header>{header}</Header>
-      <Content>{children}</Content>
+      {children}
       <Footer>{footer}</Footer>
     </Wrapper>
   );

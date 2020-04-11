@@ -1,58 +1,30 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { Logo, Menu as HeaderMenu } from 'components';
-import { LogIn } from 'styled-icons/boxicons-regular/LogIn';
-import { Menu } from 'styled-icons/boxicons-regular/Menu';
-
-const Wrapper = styled.div`
-  display: flex;
-  background-color: yellowgreen;
-`;
-
-const InnerWrapper = styled.div`
-  margin: auto;
-  display: flex;
-  width: 100%;
-
-  @media (min-width: 1012px) {
-    padding: 0;
-    width: 1012px;
-  }
-
-  @media (min-width: 960px) {
-    padding: 0;
-    width: 960px;
-  }
-`;
-
-const LogoAndMenuWrapper = styled.div`
-  display: flex;
-  flex: 1 1 auto;
-  justify-content: flex-start;
-  margin: auto;
-`;
-
-const AlertWrapper = styled.div`
-  flex: 0 0 auto
-  justify-content: flex-end;
-  margin: auto;
-`;
+import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
 
 const Header = () => {
   return (
-    <Wrapper>
-      <InnerWrapper>
-        <LogoAndMenuWrapper>
-          <Logo />
-          <HeaderMenu />
-        </LogoAndMenuWrapper>
-        <AlertWrapper>
-          <LogIn size="24" />
-          <Menu size="24" />
-        </AlertWrapper>
-      </InnerWrapper>
-    </Wrapper>
+    <Navbar bg="dark" variant="dark">
+      <Navbar.Brand href="#home">SNS</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mr-auto">
+          <Nav.Link href="#home">Home</Nav.Link>
+          <Nav.Link href="#link">Link</Nav.Link>
+          <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+          </NavDropdown>
+        </Nav>
+        <Form inline>
+          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+          <Button variant="outline-info">Search</Button>
+        </Form>
+      </Navbar.Collapse>
+    </Navbar>
   );
 };
 
