@@ -1,32 +1,58 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-import { Navbar, Nav, NavDropdown, Form, FormControl, Button, Container } from 'react-bootstrap';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Button from '@material-ui/core/Button';
+import Link from '@material-ui/core/Link';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+  '@global': {
+    ul: {
+      margin: 0,
+      padding: 0,
+      listStyle: 'none',
+    },
+  },
+  appBar: {
+    borderBottom: `1px solid ${theme.palette.divider}`,
+  },
+  toolbar: {
+    flexWrap: 'wrap',
+  },
+  toolbarTitle: {
+    flexGrow: 1,
+  },
+  link: {
+    margin: theme.spacing(1, 1.5),
+  },
+}));
 
 const Header = () => {
+  const classes = useStyles();
+
   return (
-    <Navbar bg="dark" variant="dark">
-      <Container>
-        <Navbar.Brand href="#home">SNS</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-          <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-info">Search</Button>
-          </Form>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
+      <Toolbar className={classes.toolbar}>
+        <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
+          Grea
+        </Typography>
+        <nav>
+          <Link variant="button" color="textPrimary" href="/" className={classes.link}>
+            Features
+          </Link>
+          <Link variant="button" color="textPrimary" href="/" className={classes.link}>
+            Enterprise
+          </Link>
+          <Link variant="button" color="textPrimary" href="/" className={classes.link}>
+            Support
+          </Link>
+        </nav>
+        <Button href="#" color="primary" variant="outlined" className={classes.link}>
+          Login
+        </Button>
+      </Toolbar>
+    </AppBar>
   );
 };
 
