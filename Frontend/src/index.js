@@ -8,7 +8,6 @@ import { BrowserRouter } from 'react-router-dom';
 import api from 'services/api';
 import * as serviceWorker from './serviceWorker';
 import App from './components/App';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const store = configureStore({}, { api: api.create() });
 
