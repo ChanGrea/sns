@@ -1,10 +1,7 @@
 import React from 'react';
-import {
-  createGlobalStyle,
-  ThemeProvider,
-} from 'styled-components';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
-import { HomePage } from 'components';
+import { HomePage, LoginPage } from 'components';
 
 import theme from './themes/default';
 
@@ -21,6 +18,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <Switch>
           <Route path="/" component={HomePage} exact />
+          <Route path="/login" component={LoginPage} />
         </Switch>
       </ThemeProvider>
     </div>
