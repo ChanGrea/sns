@@ -20,6 +20,10 @@ const Header = styled.header`
   z-index: 999;
 `;
 
+const Center = styled.div`
+  margin-top: 1em;
+`;
+
 const Footer = styled.footer`
   margin-top: auto;
 `;
@@ -28,7 +32,7 @@ const PageTemplate = ({ header, children, footer, ...props }) => {
   return (
     <Wrapper {...props}>
       <Header>{header}</Header>
-      {children}
+      <Center>{children}</Center>
       <Footer>{footer}</Footer>
     </Wrapper>
   );
