@@ -1,30 +1,47 @@
 import React from 'react';
-import styled from 'styled-components';
-import { key, palette } from 'styled-theme';
+import Container from '@material-ui/core/Container';
+import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
+import { makeStyles } from '@material-ui/core/styles';
 
-import { Paragraph, Link } from 'components';
+function Copyright() {
+  return (
+    <Typography variant="body2" color="textSecondary" align="center">
+      Copyright © 
+      <Link color="inherit" href="https://changrea.io">
+        Chanyoung Lee
+      </Link>
+      {' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
+}
 
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 1.5rem;
-  background-color: ${palette('grayscale', 1, true)};
-`;
 
-const Credits = styled(Paragraph)`
-  font-style: ${key('fontStyle.italic')};
-  vertical-align: center;
-  text-align: center;
-  margin: 0;
-`;
+const useStyles = makeStyles((theme) => ({
+  footer: {
+    borderTop: `1px solid ${theme.palette.divider}`,
+    marginTop: theme.spacing(8),
+    paddingTop: theme.spacing(3),
+    paddingBottom: theme.spacing(3),
+    [theme.breakpoints.up('sm')]: {
+      paddingTop: theme.spacing(6),
+      paddingBottom: theme.spacing(6),
+    },
+  },
+}));
 
 const Footer = () => {
+  const classes = useStyles();
+
   return (
-    <Wrapper>
-      <Credits>
-        Made by <Link href="https://github.com/changrea">ChanGrea</Link>
-      </Credits>
-    </Wrapper>
+    <Container maxWidth="md" component="footer" className={classes.footer}>
+      <Box mt={5}>
+        <Copyright />
+      </Box>
+    </Container>
   );
 };
 
