@@ -13,6 +13,12 @@ const useStyles = makeStyles({
   root: {
     minWidth: 275,
   },
+  alignCenter: {
+    textAlign: 'center',
+    alignContent: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });
 
 const LoginPage = () => {
@@ -22,12 +28,15 @@ const LoginPage = () => {
     <SimplePageTemplate header={<Header />} footer={<Footer />}>
       <Container maxWidth="sm">
         <Card className={classes.root} variant="outlined">
-          <CardHeader title="Login" />
-          <CardContent>
+          <CardHeader title="Login" className={classes.alignCenter} />
+          <CardContent className={classes.alignCenter}>
             <LoginForm />
           </CardContent>
-          <CardActions>
-            <Button size="small">Learn More</Button>
+          <CardActions className={classes.alignCenter}>
+            <Button size="small" color="primary">
+              LOGIN
+            </Button>
+            <Button size="small">JOIN</Button>
           </CardActions>
         </Card>
       </Container>
