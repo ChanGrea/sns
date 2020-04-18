@@ -1,7 +1,12 @@
 import React from 'react';
 
-import { GeneralPageTemplate, SideMenu, Header, Footer } from 'components';
-import Typography from '@material-ui/core/Typography';
+import {
+  GeneralPageTemplate,
+  SideMenu,
+  Header,
+  Footer,
+  Feed,
+} from 'components';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 
@@ -14,7 +19,7 @@ const HomePage = () => {
             <SideMenu />
           </Grid>
           <Grid item xs={8}>
-            <Typography>right</Typography>
+            <Feed />
           </Grid>
         </Grid>
       </Container>
