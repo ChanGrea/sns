@@ -28,7 +28,7 @@ const Footer = styled.footer`
   margin-top: auto;
 `;
 
-const PageTemplate = ({ header, children, footer, ...props }) => {
+const GeneralPageTemplate = ({ header, children, footer, ...props }) => {
   return (
     <Wrapper {...props}>
       <Header>{header}</Header>
@@ -38,10 +38,10 @@ const PageTemplate = ({ header, children, footer, ...props }) => {
   );
 };
 
-PageTemplate.propTypes = {
+GeneralPageTemplate.propTypes = {
   header: PropTypes.node.isRequired,
   footer: PropTypes.node.isRequired,
   children: PropTypes.any.isRequired,
 };
 
-export default PageTemplate;
+export default GeneralPageTemplate;
