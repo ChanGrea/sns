@@ -19,9 +19,9 @@ const SideMenu = () => {
   return (
     <Paper className={classes.paper}>
       <MenuList>
-        <MenuItem>Profile</MenuItem>
-        <MenuItem>My account</MenuItem>
-        <MenuItem>Logout</MenuItem>
+        <MenuItem>뉴스피드</MenuItem>
+        <MenuItem>피드 작성</MenuItem>
+        <MenuItem>내 정보</MenuItem>
       </MenuList>
     </Paper>
   );
