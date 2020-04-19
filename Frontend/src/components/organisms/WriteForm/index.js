@@ -10,7 +10,7 @@ import {
   Chip,
   Typography,
 } from '@material-ui/core';
-import { deepOrange, blue } from '@material-ui/core/colors';
+import { deepOrange } from '@material-ui/core/colors';
 
 const useStyles = makeStyles(theme => ({
   root: {
