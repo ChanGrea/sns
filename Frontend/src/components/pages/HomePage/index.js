@@ -6,6 +6,7 @@ import {
   Header,
   Footer,
   Feed,
+  WriteForm,
 } from 'components';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
@@ -20,6 +21,7 @@ const HomePage = () => {
           </Grid>
           <Grid item xs={8}>
             <Feed />
+            <WriteForm />
           </Grid>
         </Grid>
       </Container>
