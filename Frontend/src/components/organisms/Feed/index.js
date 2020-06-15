@@ -3,12 +3,9 @@ import Paper from '@material-ui/core/Paper';
 import { Typography, Box, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
   root: {
     display: 'flex',
-  },
-  paper: {
-    marginRight: theme.spacing(2),
   },
   title: {
     textAlign: 'center',
@@ -26,7 +23,7 @@ const Feed = () => {
   const classes = useStyles();
 
   return (
-    <Paper className={classes.paper}>
+    <Paper>
       <Typography variant="h4" gutterBottom className={classes.title}>
         Feed Title
       </Typography>
