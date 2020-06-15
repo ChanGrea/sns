@@ -18,6 +18,9 @@ function App() {
       <ThemeProvider theme={theme}>
         <Switch>
           <Route path="/" component={HomePage} exact />
+          <Route path="/main/feeds" component={HomePage} />
+          <Route path="/main/feeds/write" component={HomePage} />
+          <Route path="/main/myInfo" component={HomePage} />
           <Route path="/login" component={LoginPage} />
         </Switch>
       </ThemeProvider>
